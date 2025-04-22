@@ -295,7 +295,7 @@ for (k in 1:nsim) {
 		evaluesH[j] <- ztestE(Z[,j], a = a)
 		}
 	
-	out.maxSC <- maxSC(evaluesH, alpha=alpha)
+	out.maxSC <- eBHplus(evaluesH, alpha=alpha)
 	rej.maxSC[k] <- out.maxSC$rejections
 
 	fp.maxSC <- sum(out.maxSC$indices > m-n0)
